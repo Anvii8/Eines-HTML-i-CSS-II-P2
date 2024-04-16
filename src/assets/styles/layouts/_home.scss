@@ -72,13 +72,13 @@ header {
   color: #333;
 }
 
-.top-nav a:hover {
-  color: #ffa500;
-}
-
 .bottom-nav a {
   text-decoration: none;
   color: #fff;
+}
+
+.top-nav a:hover {
+  color: #ffa500;
 }
 
 .bottom-nav a:hover {
@@ -115,10 +115,6 @@ h1{
 .btn:hover {
   background-color: #ff8000;
   transform: translateY(-2px); /* Efecto de elevación */
-}
-
-.btn:hover{
-  background-color: #ffa500;
 }
 
 footer {
