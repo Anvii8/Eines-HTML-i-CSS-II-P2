@@ -1,0 +1,72 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    @media (max-width: 431px) {
+      display: flex;
+      flex-direction: column;
+    }
+    @media (min-width: 431px) and (max-width: 821px) {
+      display: flex;
+      flex-direction: column;
+    }
+}
+
+.top-nav ul{
+    list-style: none;
+    @media (max-width: 431px) {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      margin-top: 10px;
+      margin-bottom: auto;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      gap: 20px;
+    }
+    @media (min-width: 431px) and (max-width: 821px) {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      margin-top: 10px;
+      margin-bottom: auto;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      gap: 15px;
+    }
+}
+
+.top-nav li {
+    display: inline;
+    margin-right: 50px;
+    @media (max-width: 431px) {
+        padding: 0;
+        margin: 0 auto;
+    }
+    @media (min-width: 431px) and (max-width: 821px) {
+        padding: 0;
+        margin: 0 auto;
+    }
+}
+
+.top-nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+.top-nav a:hover {
+    color: #ffa500;
+}
+
+/* Versiones alternativas para navegadores que no admiten CSS Grid */
+@supports not (display: grid) {
+  header {
+      width: 100%;
+      padding: 10px;
+  }
+}
+  
+

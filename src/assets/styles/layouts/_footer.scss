@@ -1,0 +1,119 @@
+footer {
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.contact-info {
+    margin-bottom: 20px;
+}
+  
+.contact-info p {
+    margin: 5px 0;
+}
+  
+hr {
+    border: none;
+    border-top: 1px solid #fff;
+    margin: 20px 0;
+}
+  
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 431px) {
+      gap: 0px;
+      flex-direction: column;
+    }
+    @media (min-width: 431px) and (max-width: 821px) {
+      flex-direction: column;
+      gap: 15px;
+    }
+}
+
+
+.bottom-nav{
+    margin-right: 150px;
+    @media (max-width: 431px) {
+      margin-right: 0px;
+    }
+    @media (min-width: 431px) and (max-width: 821px) {
+      margin-right: 0px;
+    }
+}
+  
+.bottom-nav ul {
+    list-style: none;
+  
+    @media (max-width: 431px) {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      gap: 20px;
+    }
+    @media (min-width: 431px) and (max-width: 821px) {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      gap: 15px;
+    }
+}
+  
+  
+  
+.bottom-nav li {
+    display: inline-block;
+    margin-right: 50px;
+    @media (max-width: 431px) {
+      padding: 0;
+      margin: 0 auto;
+    }
+    @media (min-width: 431px) and (max-width: 821px) {
+      padding: 0;
+      margin: 0 auto;
+    }
+}
+  
+  
+.bottom-nav a {
+    text-decoration: none;
+    color: #fff;
+}
+  
+  
+  
+.bottom-nav a:hover {
+    text-decoration: none;
+    color: #ffa500;
+}
+  
+.social-icons .icon {
+    color: #fff;
+    margin-right: 10px;
+    font-size: 20px;
+}
+  
+.social-icons .icon:hover {
+    color: #ffa500;
+}
+
+/* Versiones alternativas para navegadores que no admiten CSS Grid */
+@supports not (display: grid) {
+    footer {
+        width: 100%;
+        padding: 10px;
+    }
+}
