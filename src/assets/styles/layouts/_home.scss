@@ -4,7 +4,7 @@ body {
   font-size: 16px;
 }
 
-.container {
+.containergrid {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
@@ -62,11 +62,7 @@ h1{
 .btn {
   padding: 15px 30px;
   font-size: 24px;
-  border-radius: 10px;
-  background-color: #ffa500;
-  color: #fff;
-  border: none;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: white;
   transition: background-color 0.3s, transform 0.2s;
   @media (max-width: 431px) {
     font-size: 15px;
@@ -77,8 +73,8 @@ h1{
 }
 
 .btn:hover {
-  background-color: #ff8000;
-  transform: translateY(-2px); /* Efecto de elevación */
+  color: white;
+  transform: translateY(-2px);  //Efecto de elevación 
 }
 
 /* Versiones alternativas para navegadores que no admiten CSS Grid */
