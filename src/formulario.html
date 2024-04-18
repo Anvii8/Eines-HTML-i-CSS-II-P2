@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Página donde se encuentra el formulario de contacto.">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+    <link rel="icon" type="image/x-icon" href="./assets/images/logo.ico">
+    <title>Formulario de contacto</title>
+  </head>
+  <body>
+    <include src="./views/header.html"></include>
+    <div class="container">
+        <h1 class="display-1 text-center">Formulario de contacto</h1>
+        <form name="contact" method="POST" netlify>
+            <div class="form-group">
+              <label for="exampleInputName" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="exampleInputName" aria-describedby="NameHelp" required>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputSurname" class="form-label">Apellidos</label>
+              <input type="text" class="form-control" id="exampleInputSurname" aria-describedby="SurnameHelp" required>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1" class="form-label">Email</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+              <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico.</div>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputphone" class="form-label">Teléfono</label>
+              <input type="number" class="form-control" id="exampleInputphone" aria-describedby="phoneHelp" required>
+              <div id="phoneHelp" class="form-text">Nunca compartiremos su número de teléfono.</div>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputCity" class="form-label">Ciudad</label>
+                <input type="text" class="form-control" id="exampleInputCity" aria-describedby="CityHelp" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputmensaje" class="form-label">Explícanos tus recetas favoritas</label>
+                <textarea id="mensaje" name="mensaje" rows="5"></textarea>
+            </div>
+
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+              <label class="form-check-label" for="exampleCheck1">Aceptar Términos y Condiciones</label>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+        </form>
+    </div>
+    <include src="./views/footer.html"></include>
+    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+  </body>
+</html>

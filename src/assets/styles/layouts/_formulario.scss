@@ -1,0 +1,24 @@
+.form-group{
+ margin-top: 30px;   
+ margin-bottom: 30px;   
+}
+
+.form-group textarea{ 
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border-color: rgb(221, 221, 221);
+}
+
+.btn{
+    margin-top: 30px;
+}
+
+:is(label){
+    @media (max-width: 431px) {
+        font-size: 16px;
+    }
+    @media (min-width: 431px) and (max-width: 821px) {
+        font-size: 22px;
+    }
+}
