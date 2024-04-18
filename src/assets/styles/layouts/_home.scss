@@ -18,15 +18,8 @@ body {
 }
 
 .logo {
-  width: 100px;
+  max-width: 100px;
   height: auto;
-  margin-right: 150px;
-  @media (max-width: 431px) {
-    margin-right: 0px;
-  }
-  @media (min-width: 431px) and (max-width: 821px) {
-    margin-right: 0px;
-  }
 }
 
 .main-content {
