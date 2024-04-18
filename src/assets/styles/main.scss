@@ -15,6 +15,7 @@
  * see commented examples below
  */
  @import "npm:@fortawesome/fontawesome-free/css/all.css";
+ @import "bootstrap/scss/bootstrap";
 // @import "some-node-module";
 // @import "@some-company/some-node-module";
 
@@ -27,6 +28,7 @@
 @import "layouts/participants";
 @import "layouts/footer";
 @import "layouts/header";
+@import "layouts/article";
 
 /**
  * Do NOT include anything else in this file!
