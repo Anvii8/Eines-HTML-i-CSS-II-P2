@@ -1,6 +1,6 @@
-header {
+/*header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 20px;
     @media (max-width: 431px) {
@@ -11,10 +11,16 @@ header {
       display: flex;
       flex-direction: column;
     }
+}*/
+
+.nav-link:hover{
+  color: #ffa500;
 }
 
-.top-nav ul{
+/*.top-nav ul{
     list-style: none;
+    margin: 0;
+    padding: 0;
     @media (max-width: 431px) {
       display: flex;
       flex-direction: column;
@@ -53,6 +59,19 @@ header {
     }
 }
 
+.top-nav li:last-child{
+  margin-right: 0;
+  @media (max-width: 431px) {
+    padding: 0;
+    margin: 0 auto;
+  }
+  @media (min-width: 431px) and (max-width: 821px) {
+    padding: 0;
+    margin: 0 auto;
+    font-size: 20px;
+  }
+}
+
 .top-nav a {
     text-decoration: none;
     color: #333;
@@ -60,7 +79,7 @@ header {
 
 .top-nav a:hover {
     color: #ffa500;
-}
+}*/
 
 /* Versiones alternativas para navegadores que no admiten CSS Grid */
 @supports not (display: grid) {
