@@ -1,0 +1,106 @@
+.portada{
+    width: 100%;
+    margin: 0;
+}
+
+.display-1{
+    @media (max-width: 431px) {
+        font-size: 32px;
+    }
+}
+
+.portada:has(h1){
+    text-align: center;
+}
+
+.imagen-articulo{
+    max-width: 100%;
+    height: auto;
+}
+
+.autor{
+    font-size: .8rem;
+    text-align: center;
+}
+
+.container {
+    margin-bottom: 50px;
+}
+
+.container-article{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width:80%;
+}
+
+.debajo-imagen{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    @media (max-width: 431px) {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+}
+
+:is(.container p){
+    @media (max-width: 431px) {
+        font-size: 16px;
+    }
+    @media (min-width: 431px) and (max-width: 821px) {
+        font-size: 22px;
+    }
+}
+
+:is(.lista h2){
+    @media (max-width: 431px) {
+        font-size: 22px;
+    }
+    @media (min-width: 431px) and (max-width: 821px) {
+        font-size: 30px;
+    }
+}
+
+:is(.lista p, .partefinal p){
+    font-weight: 400;
+}
+
+.hrarticle{
+    border-top: 5px solid #000000;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+blockquote {
+    margin-left: 45px;
+    padding-left: 2rem;
+    border-left: 3px solid #ff8000;
+    width: 92%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    @media (max-width: 431px) {
+        margin-left: 20px;
+    }
+    @media (min-width: 431px) and (max-width: 821px) {
+        margin-left: 30px;
+    }
+}
+
+.texto-blockquote{
+    font-size: 1.55rem;
+}
+
+.cita{
+    @media (max-width: 431px) {
+        font-size: 14px;
+    }
+    @media (min-width: 431px) and (max-width: 821px) {
+        font-size: 20px;
+    }
+}
+
+.parte-final{
+    margin-top: 40px;
+}
