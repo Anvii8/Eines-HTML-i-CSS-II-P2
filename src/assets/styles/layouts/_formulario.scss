@@ -11,7 +11,7 @@
     width: 100%;
     box-sizing: border-box;
     border-radius: 5px;
-    border-color: color(display-p3 0.8722 0.8722 0.8722);
+    border-color: color(display-p3 $input-border-color);
 
 }
 
@@ -30,6 +30,9 @@
 @container (width < 431px){
     :is(label){
         font-size: max(.75em, .55em + 2cqi);
+    }
+    .form-text{
+        font-size: max(.5em, .3em + 2cqi);
     }
     .btn{
         font-size: max(.7em, .5em + 2cqi);

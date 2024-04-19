@@ -3,9 +3,9 @@ $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
   "Segoe UI Symbol";
 $font-family-serif: "Georgia", "Times New Roman", serif;
 
-$uoc-corporate: #000078;
-$uoc-masterbrand: #73edff;
-$uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
+$principal-color: #ff8000;
+$hover-color: #ffa500;
+$background-footer: #333;
 
 $theme-colors: (
  "primary": #ff8000
@@ -14,5 +14,3 @@ $theme-colors: (
 $input-border-color: color(display-p3 0.8722 0.8722 0.8722);
 
 @layer defaults, components, utilities;
-
-$mqMinWidth: 420px;

@@ -3,7 +3,7 @@ header{
 }
 
 .nav-link:hover{
-  color: #ffa500;
+  color: $hover-color;
 }
 
 @container (width < 431px){
