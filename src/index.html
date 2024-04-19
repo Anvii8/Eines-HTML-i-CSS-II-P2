@@ -11,8 +11,9 @@
   </head>
   <body>
     <include src="./views/header.html"></include>
-    <div class="containergrid">
-      <section class="main-content">
+    <div class="grid-container">
+      <div class="grid-container2">
+        <section class="main-content">
           <picture>
               <source srcset="./assets/images/portada.jpg?as=webp" type="image/webp" />
               <img src="./assets/images/portada.jpg" alt="Concurso de Cocina" class="imagenportada" />
@@ -20,9 +21,13 @@
           <div>
               <h1>Saborea y Gana: Concurso de cocina</h1>
               <p class="eslogan">¡Demuestra tus habilidades culinarias y gana premios increíbles!</p>
-              <button type="button" class="btn btn-primary">Más Información</button>
+              <!--<button type="button" class="btn btn-primary" id="more-info">Más Información</button>-->
+              <a href="#" class="enlace-info" id="call-to-action">
+                Más Información
+              </a>
           </div>
-      </section>
+        </section>
+      </div>
     </div>
     <include src="./views/footer.html"></include>
     <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
