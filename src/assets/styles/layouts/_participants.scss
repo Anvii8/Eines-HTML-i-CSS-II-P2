@@ -1,22 +1,25 @@
+@layer defaults {
+    .containervideos h1 {
+        font-size: 3.5rem;
+    }
+}
+  
+@layer utilities {
+    .containervideos h1 {
+        text-align: center;
+    }
+}
+
 .containervideos{
     max-width: 100%;
     margin-top: auto;
     margin-bottom: 150px;
+    container-type: inline-size;
 
     h1{
         margin-top: 25px;
         margin-bottom: 50px;
         font-size: 3.5rem;
-        text-align: center;
-        @media (max-width: 431px) {
-            width: 100%;
-            font-size: 1.9rem;
-            margin-bottom: 0px;
-        }
-        @media (min-width: 431px) and (max-width: 821px) {
-            font-size: 2.9rem;
-            margin-bottom: 0px;
-        }
     }
 }
 
@@ -38,17 +41,43 @@ figure{
         grid-template-columns: repeat(3, 1fr);
         max-width: 70%;
         gap: 50px;
-        @media (max-width: 431px) {
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            padding: 0;
-            margin: 0 auto;
-        }
-        @media (min-width: 431px) and (max-width: 821px) {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            
-        }
+    }
+}
+
+@container (width < 431px){
+    .containervideos h1{
+        width: 100%;
+        font-size: 1.9rem;
+        margin-bottom: 0px;
+    }
+    .navvideos ul{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0;
+        margin: 0 auto;
+    }
+    .card-title{
+        font-size: 23px;
+    }
+    .card-text{
+        font-size: 15px;
+    }
+}
+
+@container (width > 430px) and (width < 821px){
+    .containervideos h1{
+        font-size: 2.9rem;
+        margin-bottom: 0px;
+    }
+    .navvideos ul{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    .card-title{
+        font-size: 28px;
+    }
+    .card-text{
+        font-size: 20px;
     }
 }
 

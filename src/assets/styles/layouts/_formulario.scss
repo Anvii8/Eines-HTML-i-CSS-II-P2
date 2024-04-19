@@ -1,3 +1,7 @@
+.container{
+    container-type: inline-size;
+}
+
 .form-group{
  margin-top: 30px;   
  margin-bottom: 30px;   
@@ -7,18 +11,36 @@
     width: 100%;
     box-sizing: border-box;
     border-radius: 5px;
-    border-color: rgb(221, 221, 221);
+    border-color: color(display-p3 0.8722 0.8722 0.8722);
+
 }
 
 .btn{
     margin-top: 30px;
+    padding: 15px 30px;
+    font-size: 24px;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-:is(label){
-    @media (max-width: 431px) {
-        font-size: 16px;
+.btn:hover {
+    color: white;
+    transform: translateY(-2px);  //Efecto de elevación 
+}
+
+@container (width < 431px){
+    :is(label){
+        font-size: max(.75em, .55em + 2cqi);
     }
-    @media (min-width: 431px) and (max-width: 821px) {
-        font-size: 22px;
+    .btn{
+        font-size: max(.7em, .5em + 2cqi);
+    }
+}
+
+@container (width > 430px) and (width < 821px){
+    :is(label){
+        font-size: max(.7em, .5em + 2cqi);
+    }
+    .btn{
+        font-size: max(.75em, .55em + 2cqi);
     }
 }

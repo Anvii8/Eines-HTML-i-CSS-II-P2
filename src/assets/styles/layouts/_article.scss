@@ -1,12 +1,7 @@
 .portada{
     width: 100%;
     margin: 0;
-}
-
-.display-1{
-    @media (max-width: 431px) {
-        font-size: 32px;
-    }
+    container-type: inline-size;
 }
 
 .portada:has(h1){
@@ -25,6 +20,7 @@
 
 .container {
     margin-bottom: 50px;
+    container-type: inline-size;
 }
 
 .container-article{
@@ -39,28 +35,6 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 50px;
-    @media (max-width: 431px) {
-        grid-template-columns: repeat(1, 1fr);
-        gap: 20px;
-    }
-}
-
-:is(.container p){
-    @media (max-width: 431px) {
-        font-size: 16px;
-    }
-    @media (min-width: 431px) and (max-width: 821px) {
-        font-size: 22px;
-    }
-}
-
-:is(.lista h2){
-    @media (max-width: 431px) {
-        font-size: 22px;
-    }
-    @media (min-width: 431px) and (max-width: 821px) {
-        font-size: 30px;
-    }
 }
 
 :is(.lista p, .partefinal p){
@@ -80,27 +54,49 @@ blockquote {
     width: 92%;
     margin-bottom: 20px;
     margin-top: 20px;
-    @media (max-width: 431px) {
-        margin-left: 20px;
-    }
-    @media (min-width: 431px) and (max-width: 821px) {
-        margin-left: 30px;
-    }
 }
 
 .texto-blockquote{
     font-size: 1.55rem;
 }
 
-.cita{
-    @media (max-width: 431px) {
-        font-size: 14px;
-    }
-    @media (min-width: 431px) and (max-width: 821px) {
-        font-size: 20px;
-    }
-}
-
 .parte-final{
     margin-top: 40px;
+}
+
+@container (width < 431px){
+    .display-1{
+        font-size: 32px;
+    }
+    .debajo-imagen{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px; 
+    }
+    :is(.container p){
+        font-size: 16px;
+    }
+    :is(.lista h2){
+        font-size: 22px;
+    }
+    .blockquote{
+        margin-left: 20px;
+    }
+    .cita{
+      font-size: 14px;
+    }
+}
+  
+@container (width > 430px) and (width < 821px){
+    :is(.container p){
+        font-size: 20px;
+    }
+    :is(.lista h2){
+        font-size: 25px;
+    }
+    .blockquote{
+        margin-left: 30px;
+    }
+    .cita{
+        font-size: 20px;
+    }
 }

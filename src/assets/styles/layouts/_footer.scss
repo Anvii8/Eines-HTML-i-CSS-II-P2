@@ -3,14 +3,11 @@ footer {
     background-color: #333;
     color: #fff;
     text-align: center;
+    container-type: inline-size;
 }
 
 .contact-info {
     margin-bottom: 20px;
-    @media (min-width: 431px) and (max-width: 821px) {
-      font-size: 20px;
-    }
-
     p {
       margin: 5px 0;
     }
@@ -27,14 +24,11 @@ hr {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    @media (max-width: 431px) {
-      gap: 0px;
-      flex-direction: column;
-    }
-    @media (min-width: 431px) and (max-width: 821px) {
-      flex-direction: column;
-      gap: 15px;
-    }
+}
+
+@function invert($color, $amount: 100%) {
+  $inverse: color.change($color, $hue: color.hue($color) + 180);
+  @return mix($inverse, $color, $amount);
 }
 
 .bottom-nav {
@@ -42,60 +36,20 @@ hr {
     list-style: none;
     margin: 0;
     padding: 0;
-    @media (max-width: 431px) {
-      display: flex;
-      flex-direction: column;
-      padding: 0;
-      margin-top: 20px;
-      margin-bottom: 20px;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-      gap: 20px;
-    }
-    @media (min-width: 431px) and (max-width: 821px) {
-      display: flex;
-      flex-direction: column;
-      padding: 0;
-      margin-top: 10px;
-      margin-bottom: 10px;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-      gap: 15px;
-    }
   }
 
   li {
     display: inline-block;
     margin-right: 50px;
-    @media (max-width: 431px) {
-      padding: 0;
-      margin: 0 auto;
-    }
-    @media (min-width: 431px) and (max-width: 821px) {
-      padding: 0;
-      margin: 0 auto;
-      font-size: 20px;
-    }
   }
 
   li:last-child{
     margin-right: 0;
-    @media (max-width: 431px) {
-      padding: 0;
-      margin: 0 auto;
-    }
-    @media (min-width: 431px) and (max-width: 821px) {
-      padding: 0;
-      margin: 0 auto;
-      font-size: 20px;
-    }
   }
 
   a {
     text-decoration: none;
-    color: #fff;
+    color: invert(#fff, 40%);
   }
 
   a:hover {
@@ -114,7 +68,71 @@ hr {
   .icon:hover {
     color: #ffa500;
   }
-} 
+}
+
+@container (width < 430px){
+  .footer-content{
+    gap: 0px;
+    flex-direction: column;
+  }
+
+  .bottom-nav{
+    ul{
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      gap: 20px; 
+    }
+    li{
+      padding: 0;
+      margin: 0 auto;
+    }
+    li:last-child{
+      padding: 0;
+      margin: 0 auto;
+    }
+  } 
+
+}
+
+@container (width > 431px) and (width < 821px){
+  .contact-info{
+    font-size: 20px;
+  }
+  .footer-content{
+    flex-direction: column;
+    gap: 15px;
+  }
+  .bottom-nav{
+    ul{
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      gap: 15px;
+    }
+    li{
+      padding: 0;
+      margin: 0 auto;
+      font-size: 20px;
+    }
+    li:last-child{
+      padding: 0;
+      margin: 0 auto;
+      font-size: 20px;
+    }
+  } 
+
+}
 
 /* Versiones alternativas para navegadores que no admiten CSS Grid */
 @supports not (display: grid) {

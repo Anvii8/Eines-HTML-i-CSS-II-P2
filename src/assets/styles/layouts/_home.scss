@@ -1,20 +1,29 @@
+@layer defaults {
+  .enlace-info:hover {
+    transform: translateY(-2px);    
+  }
+}
+
+@layer utilities {
+  .enlace-info {
+    background-color: #ff8000;
+  }
+}
+
+@layer components {
+  #call-to-action {
+    display: inline-block;
+    border-radius: 0.25em;
+    padding: 15px 30px;
+    font-size: 24px;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+}
+
 body {
   margin: 0;
   font-family: $font-family-sans-serif;
   font-size: 16px;
-}
-
-.containergrid {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
-  @media (max-width: 431px) {
-    min-height: 50vh;
-  }
-  @media (min-width: 431px) and (max-width: 821px) {
-    min-height: 60vh;
-  }
 }
 
 .logo {
@@ -22,57 +31,84 @@ body {
   height: auto;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  container-type: inline-size;
+}
+
+.grid-container2{
+  min-height: 100vh;
+}
+
 .main-content {
   text-align: center;
   padding: 20px;
-}
 
-.imagenportada{
-  max-width: 100%;
-  height: auto;
-}
+  .imagenportada{
+    max-width: 100%;
+    height: auto;
+  }
+  
+  h1{
+    font-family: $font-family-serif;
+    font-size: 48px;
+  }
 
-h1{
-  font-family: $font-family-serif;
-  font-size: 48px;
-  @media (max-width: 431px) {
-    font-size: 30px;
+  .enlace-info{
+    color: black;
+    text-decoration: none;
   }
-  @media (min-width: 431px) and (max-width: 821px) {
-    font-size: 40px;
-  }
-}
 
-.eslogan{
-  @media (max-width: 431px) {
-    font-size: 15px;
-  }
-  @media (min-width: 431px) and (max-width: 821px) {
-    font-size: 20px;
+  .enlace-info:hover{
+    color: white;
   }
 }
 
-.btn {
-  padding: 15px 30px;
-  font-size: 24px;
-  color: white;
-  transition: background-color 0.3s, transform 0.2s;
-  @media (max-width: 431px) {
-    font-size: 15px;
+@container (width < 431px){
+  .grid-container2{
+    min-height: 50vh;
   }
-  @media (min-width: 431px) and (max-width: 821px) {
-    font-size: 20px;
+  .main-content {
+    h1{
+      font-size: 30px;
+    }
+
+    .eslogan{
+      font-size: 18px;
+    }
+  
+    .enlace-info {
+      margin-top: 20px;
+      font-size: 15px;
+    }
   }
 }
 
-.btn:hover {
-  color: white;
-  transform: translateY(-2px);  //Efecto de elevación 
+@container (width > 430px) and (width < 821px){
+  .grid-container2{
+    min-height: 50vh;
+  }
+  .main-content {
+    h1{
+      font-size: 40px;
+    }
+
+    .eslogan{
+      font-size: 20px;
+    }
+  
+    .enlace-info {
+      margin-top: 20px;
+      font-size: 20px;
+    }
+  }
 }
 
 /* Versiones alternativas para navegadores que no admiten CSS Grid */
 @supports not (display: grid) {
-  .container {
+  .containergrid {
       display: flex;
       flex-direction: column;
   }
