@@ -1,5 +1,3 @@
-@use "sass:color";
-
 $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
   "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
   "Segoe UI Symbol";
@@ -12,5 +10,9 @@ $uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
 $theme-colors: (
  "primary": #ff8000
 );
+
+$input-border-color: color(display-p3 0.8722 0.8722 0.8722);
+
+@layer defaults, components, utilities;
 
 $mqMinWidth: 420px;
