@@ -7,11 +7,11 @@
  margin-bottom: 30px;   
 }
 
-.form-group textarea{ 
+#mensaje{ 
     width: 100%;
     box-sizing: border-box;
     border-radius: 5px;
-    border-color: color(display-p3 $input-border-color);
+    border-color: $input-border-color;
 
 }
 
