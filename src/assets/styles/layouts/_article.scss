@@ -100,3 +100,24 @@ blockquote {
         font-size: 20px;
     }
 }
+
+@supports not (display: grid) {
+    .debajo-imagen {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    @container (width < 431px){
+        .debajo-imagen {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    
+    @container (width > 430px) and (width < 821px){
+        .debajo-imagen {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

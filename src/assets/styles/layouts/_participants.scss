@@ -81,3 +81,26 @@ figure{
     }
 }
 
+@supports not (display: grid) {
+    .navvideos ul {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    @container (width < 431px){
+        .navvideos ul{
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            margin: 0 auto;
+        }
+    }
+    
+    @container (width > 430px) and (width < 821px){
+        .navvideos ul{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
