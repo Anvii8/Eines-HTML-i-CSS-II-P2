@@ -1,29 +1,29 @@
 footer {
-    padding: 20px;
-    background-color: $background-footer;
-    color: white;
-    text-align: center;
-    container-type: inline-size;
+  padding: 20px;
+  background-color: $background-footer;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  container-type: inline-size;
 }
 
 .contact-info {
-    margin-bottom: 20px;
-    p {
-      margin: 5px 0;
-    }
+  margin-bottom: 20px;
+  p {
+    margin: 5px 0;
+  }
 }
   
 hr {
-    border: none;
-    border-top: 1px solid white;
-    margin: 20px 0;
+  border: none;
+  border-top: 1px solid rgb(255, 255, 255);
+  margin: 20px 0;
 }
   
 .footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 @function invert($color, $amount: 100%) {
@@ -49,7 +49,7 @@ hr {
 
   a {
     text-decoration: none;
-    color: invert(white, 40%);
+    color: invert(rgb(255, 255, 255), 40%);
   }
 
   a:hover {
@@ -60,7 +60,7 @@ hr {
   
 .social-icons{
   .icon {
-    color: white;
+    color: rgb(255, 255, 255);
     margin-right: 10px;
     font-size: 20px;
   }
@@ -72,7 +72,7 @@ hr {
 
 @container (width < 431px){
   .footer-content{
-    gap: 0px;
+    gap: 0;
     flex-direction: column;
   }
 

@@ -48,7 +48,7 @@ figure{
     .containervideos h1{
         width: 100%;
         font-size: 1.9rem;
-        margin-bottom: 0px;
+        margin-bottom: 0;
     }
     .navvideos ul{
         display: grid;
@@ -67,7 +67,7 @@ figure{
 @container (width > 430px) and (width < 821px){
     .containervideos h1{
         font-size: 2.9rem;
-        margin-bottom: 0px;
+        margin-bottom: 0;
     }
     .navvideos ul{
         display: grid;
