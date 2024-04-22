@@ -4,6 +4,15 @@
     "selector-class-pattern": "^.[a-z]([a-z0-9-]+)?(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+){0,2}$",
     "color-no-invalid-hex": true,
     "no-descending-specificity": true,
-    "declaration-no-important": true
+    "declaration-no-important": true,
+    "declaration-block-no-duplicate-properties": true,
+    "length-zero-no-unit": true,
+    "color-named": "never",
+    "no-empty-source": true,
+    "comment-no-empty": true,
+    "block-no-empty": true,
+    "no-irregular-whitespace": true,
+    "custom-property-no-missing-var-function": true,
+    "font-family-no-missing-generic-family-keyword": true
  }
 }
